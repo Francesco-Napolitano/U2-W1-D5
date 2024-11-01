@@ -91,11 +91,52 @@ section > button{
    display: flex;
    flex-direction: column;
    padding: 3em 2em;
+   height: 70vh;
+   justify-content: space-between;
 }
 
 #trending{
    display: flex;
    align-items: center;
+   gap: 1em;
+}
+
+#trendind > p{
+   font-size: 0.9em;
+}
+
+.news-item{
+   display: flex;
+   gap: 1.4em;
+   align-items: baseline;
+}
+
+.news-item h3{
+   color: #e6e7e7;
+   font-size: 2em;
+   font-weight: bold;
+}
+
+.news-item > div{
+   display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 9vh;
+}
+
+.sectionDiv {
+   display: flex;
+   align-items: center;
+   gap: 1em;
+}
+
+.sectionDiv > img{
+   width: 1.5em;
+    border-radius: 50%;
+}
+
+.sectionDiv > p{
+   font-size: 0.9em;
 }
 
 /* FOOTER */
