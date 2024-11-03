@@ -275,12 +275,14 @@ article > div > p:nth-of-type(1){
    }
    #svgDiv{
       position: absolute;
-      right: 37em;
+      right: 19.6em;
       top: 4em;
    }
 
    main > section:first-child{
       padding: 2em 8em 0 10em;
+      width: 100%;
+      height: 21vh;
    }
 
    h1{
@@ -312,6 +314,7 @@ article > div > p:nth-of-type(1){
         flex-direction: row;
         flex-wrap: wrap;
         padding: 3em 8em;
+        width: 100%;
    }
    #trending{
       flex: 1 0 100%;
@@ -333,7 +336,9 @@ article > div > p:nth-of-type(1){
     justify-content: flex-end;
     float: right;
     width: 33%;
-    height: 100vh;
+    height: 100%;
+    position: relative;
+   right: -11vw;
    }
 
    #footer-links {
@@ -346,13 +351,44 @@ article > div > p:nth-of-type(1){
 
   main > div{
    position: absolute;
-    right: -1.6em;
-    top: 74em;
+    left: 57em;
+    top: 79em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 39%;
+    border-top: 1px solid #8080804d;
   }
+
+  main > section:nth-of-type(3){
+   width: 47em;
+  }
+
+  article{
+   
+    width: 53vw;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 0 8em 2em;
+  }
+
+  article > div{
+   width: 33em;
+  }
+
+  article .news-item{
+   width: 30em;
+  }
+
+  article > img{
+   width: 11vh;
+   margin-left: 0;
+  }
+
+
+
+
+  
   
  
 }
