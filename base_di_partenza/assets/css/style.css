@@ -1,6 +1,7 @@
 /* GENERAL */
 body{
    font-family: 'Spectral', serif, 'Roboto', sans-serif;
+   color: #191919;
 }
 
 button{
@@ -17,7 +18,10 @@ svg{
 
 header{
    background-color: #ffc017;
-   border-bottom: 1.5px solid #191919
+   border-bottom: 1.5px solid #191919;
+   position: fixed;
+   width: 100%;
+   z-index: 5;
 }
 
 nav > ul {
@@ -27,27 +31,31 @@ nav > ul {
    padding: 1.5em 0;
 }
 
-li{
+nav li{
    list-style-type: none;
    flex-grow: 1;
 }
 
-ul li:first-child {
+nav ul li:first-child {
    flex: 10 0 20%;
    margin-left: 2em;
 }
 
-ul li:nth-of-type(2) button{
+nav ul li:nth-of-type(5) button{
    border: 0;
    background-color: unset;
 }
 
-ul li:nth-of-type(3) button{
+nav ul li:nth-of-type(6) button{
    border: 0;
     background-color: #191919;
     color: white;
     padding: 0.7em 1em;
     border-radius: 3em;
+}
+
+.notMobile{
+   display: none;
 }
 
 /* MAIN */
@@ -93,6 +101,8 @@ section > button{
    padding: 3em 2em;
    height: 70vh;
    justify-content: space-between;
+   border-bottom: 1px solid black;
+   margin-bottom: 5em;
 }
 
 #trending{
@@ -101,8 +111,9 @@ section > button{
    gap: 1em;
 }
 
-#trendind > p{
-   font-size: 0.9em;
+#trending > p{
+   font-size: 0.8em;
+   font-weight: bold;
 }
 
 .news-item{
@@ -137,7 +148,211 @@ section > button{
 
 .sectionDiv > p{
    font-size: 0.9em;
+   font-weight: 700;
 }
 
-/* FOOTER */
+.sectionDiv span{
+   color: gray;
+   font-weight: 400;
+}
 
+.titleP{
+   font-weight: 1000;
+   margin: 3px 0 5px;
+}
+
+.lastPsection{
+   display: flex;
+   justify-content: space-between;
+   color: gray;
+}
+
+/* aside */
+
+aside {
+   padding: 0 0em 2em;
+   border-bottom: 1.5px solid #75757540;
+   margin: 0 1em 3em 1em;
+ }
+ 
+ aside h3 {
+   font-weight: 700;
+   margin-bottom: 1em;
+ }
+ 
+ aside > div {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 0.5em;
+ }
+ 
+ #discover-topics > p {
+   padding: 0.8em 1em;
+   border: 1px solid #75757540;
+   color: gray;
+   font-weight: 500;
+   font-size: 0.9em;
+ }
+ 
+/* THIRD SECTION */
+
+#footer-links{
+   padding: 0 1em 0;
+
+}
+
+#footer-links > li{
+   display: inline-block;
+   margin-right: 1.3em;
+   color: gray;
+   margin-bottom: 0.4em;
+}
+
+
+
+
+
+section:nth-of-type(3) > div{
+   padding: 0 0em 0.3em 1em;
+}
+
+article .news-item{
+   flex-direction: column;
+   gap: 0em;
+}
+
+article .sectionDiv{
+   flex-direction: row;
+   height: 4vh;
+}
+
+article {
+   padding: 0 2em 2em 1em;
+   display: flex;
+   align-items: center;
+}
+
+article .news-item > p{
+   font-size: 1.5em;
+   font-weight: bold;
+}
+
+article > img{
+   width: 18vh;
+   margin-left: 5vw;
+}
+
+article > div > p:nth-of-type(1){
+   margin: 0.5vh 1vh;
+   color: gray;
+}
+
+.descriptionP{
+   color: gray;
+   display: flex;
+   justify-content: space-between;
+}
+
+.descriptionP>p{
+   display: flex;
+   align-items: center;
+}
+
+.descriptionP p>span{
+   padding: 0.5em;
+   border-radius: 2em;
+   background-color: #80808021;
+}
+ 
+
+/* DESKTOP */
+
+@media screen and (min-width: 1200px) {
+   
+   #svg{
+      display: block;
+      width: 50em;
+   }
+   #svgDiv{
+      position: absolute;
+      right: 37em;
+      top: 4em;
+   }
+
+   main > section:first-child{
+      padding: 2em 8em 0 10em;
+   }
+
+   h1{
+      font-size: 5.5em;
+   }
+
+   section > p{
+      width: 42%;
+   }
+
+   .notMobile {
+      display: block;
+      
+   }
+   .notMobile > button{
+      border: 0;
+      background-color: unset;
+      color: black;
+      font-size: 1.1em;
+   }
+
+   nav > ul{
+      padding: 1.5em 8em;
+   }
+
+   #news-ranking{
+      height: 19vh;        
+      justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 3em 8em;
+   }
+   #trending{
+      flex: 1 0 100%;
+   }
+
+   .news-item{
+      width: 33%;
+   }
+
+   .lastPsection{
+      gap: 1.2em;
+      justify-content: flex-start;
+   }
+
+   aside{
+      margin: 0 2em 3em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    float: right;
+    width: 33%;
+    height: 100vh;
+   }
+
+   #footer-links {
+      display: flex;
+      margin-top: 2rem;
+      width: 100%;
+      float: right;
+      flex-wrap: wrap;    
+   }    
+
+  main > div{
+   position: absolute;
+    right: -1.6em;
+    top: 74em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 39%;
+  }
+  
+ 
+}
